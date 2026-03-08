@@ -1,3 +1,14 @@
+import sys
+import platform
+import streamlit as st
+
+st.write(f"Python Version: {sys.version}")
+st.write(f"Platform: {platform.platform()}")
+try:
+    import sklearn
+    st.write(f"Scikit-learn Version: {sklearn.__version__}")
+except ImportError as e:
+    st.write(f"Error importing Scikit-learn: {e}")
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -170,5 +181,6 @@ if st.sidebar.button("Assess AF Risk", type="primary"):
     ---
     **Disclaimer:** This is an automated risk assessment for informational purposes only and should not be used as a substitute for professional medical advice, diagnosis, or treatment. Always consult with a qualified healthcare provider for any health concerns.
     """)
+
 
 st.markdown("---")
