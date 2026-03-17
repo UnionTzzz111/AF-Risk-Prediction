@@ -26,24 +26,35 @@ RANDOM_SEED = 42
 np.random.seed(RANDOM_SEED)
 
 # --- Feature definitions (Must be consistent with model training) ---
-continuous_features = ['Apelin_12', 'UA', 'TC', 'HDL', 'LA', 'LV', 'RV']
-categorical_features = ['SMOKE', 'DM', 'LCX.CV']
+continuous_features = ['AGE', 'Apelin_12', 'NLRP3', 'NTproBNP', 'globulin',
+                       'TC', 'HDL', 'triglyceride', 'Urea.nitrogen', 'Cr',
+                       'LA', 'LV', 'RV', 'AAO', 'SV', 'DtoW', 'CKMB']
+categorical_features = ['SEX']
 target = 'AF'
 
-# --- Display names for features (just short names as requested) ---
+# --- Display names for features ---
 feature_name_display_map = {
-    'Apelin_12': 'Apelin_12',
-    'UA': 'UA',
-    'TC': 'TC',
-    'HDL': 'HDL',
-    'LA': 'LA',
-    'LV': 'LV',
-    'RV': 'RV',
-    'SMOKE': 'SMOKE',
-    'DM': 'DM',
-    'LCX.CV': 'LCX.CV',
-    'AF': 'AF'
+    'AGE'          : 'AGE',
+    'Apelin_12'    : 'Apelin_12',
+    'NLRP3'        : 'NLRP3',
+    'NTproBNP'     : 'NTproBNP',
+    'globulin'     : 'Globulin',
+    'TC'           : 'TC',
+    'HDL'          : 'HDL',
+    'triglyceride' : 'Triglyceride',
+    'Urea.nitrogen': 'Urea Nitrogen',
+    'Cr'           : 'Cr',
+    'LA'           : 'LA',
+    'LV'           : 'LV',
+    'RV'           : 'RV',
+    'AAO'          : 'AAO',
+    'SV'           : 'SV',
+    'DtoW'         : 'DtoW',
+    'CKMB'         : 'CKMB',
+    'SEX'          : 'SEX',
+    'AF'           : 'AF'
 }
+
 
 
 # --- Utility Functions ---
