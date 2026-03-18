@@ -141,7 +141,7 @@ for cat_feature in categorical_features:
     display_name = feature_name_display_map.get(cat_feature, cat_feature)
     user_patient_input[cat_feature] = st.sidebar.selectbox(
         label=display_name,
-        options=['No', 'Yes'],  # Representing 0 and 1
+        options=['Female', 'Male'],  # Representing 0 and 1
         index=0,  # Default to 'No' (0)
         key=f"select_{cat_feature}"
     )
